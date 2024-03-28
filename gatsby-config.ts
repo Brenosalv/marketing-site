@@ -5,8 +5,8 @@
  */
 
 import { GatsbyConfig } from "gatsby"
-import { normalizeConnector } from "./src/utils"
 import path from "path"
+import { normalizeConnector } from "./src/utils"
 
 import { SUPABASE_CONNECTION_STRING } from "./config"
 
@@ -181,9 +181,9 @@ const cfg: GatsbyConfig = {
                 // Plugins configs (optional but most likely you need one)
                 plugins: [
                     {
-                        resolve: `@draftbox-co/gatsby-rehype-inline-images`,
+                        resolve: `gatsby-rehype-inline-images`,
                         // all options are optional and can be omitted
-                        pluginOptions: {
+                        options: {
                             // all images larger are scaled down to maxWidth (default: maxWidth = imageWidth)
                             // maxWidth: 2000,
                             // disable, if you need to save memory
